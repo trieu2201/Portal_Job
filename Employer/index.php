@@ -19,12 +19,9 @@ $val = isset($_GET["page"]) ? $_GET["page"] :null;
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="cs" />
     <meta name="robots" content="all,follow" />
-
-    
     <title>JOB PORTAL BY JITESH</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
-    
     <link rel="index" href="./" title="Home" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />

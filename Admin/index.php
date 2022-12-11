@@ -44,20 +44,23 @@ include "Header.php"
 include "menu.php"
 ?>  
 <?php 
-if(!is_null($val)) {
+if(is_null($val)) {
     include "Home.php";
 } 
-else if ($val  =="Profile"){
-    include "Profile.php";
+else if ($val =="Home"){
+     include "Home.php";
 }
-else if ($val =="Education"){
-     include "Education.php";
+else if ($val  =="User"){
+    include "User.php";
 }
-else if ($val =="SearchJob"){
-     include "SearchJob.php";
+else if ($val =="ManageJob"){
+     include "ManageJob.php";
 }
-else if ($val =="Walkin"){
-     include "Walkin.php";
+else if ($val =="ManageEmployer"){
+     include "ManageEmployer.php";
+}
+else if ($val =="News"){
+     include "News.php";
 }
 else if ($val =="Feedback"){
      include "Feedback.php";
@@ -70,11 +73,9 @@ else if ($val =="logout"){
 <?php
 include "right.php"
 ?>
-
     </div> <!-- /page-in -->
     </div> <!-- /page -->
 
- 
 <?php
 include "footer.php"
 ?>
