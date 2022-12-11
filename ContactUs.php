@@ -43,25 +43,25 @@
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="6%"><img src="design/ico_archive2.gif" alt="" width="9" height="11" /></td>
-                    <td width="94%"><strong>JOB PORTAL.com<br/>
-                    MG road,<br/>
-                    Bangalore, India<br/>
-                    Pincode:560086</strong></td>
+                    <td width="94%"><strong>JOB PORTAL<br/>
+                    Ly Thuong Kiet road,<br/>
+                    Ho Chi Minh City, Viet Nam
+                    </strong></td>
                   </tr>
                   <tr>
                     <td><img src="design/ico_archive2.gif" alt="" width="9" height="11" /></td>
-					<td><strong>Office No:52061<b>
-					Mobile: +917982348094
+					<td><strong>Office No:028 7300 4183<b>
+					Mobile: 028 3864 7256
 					</strong></td>
 					
                   </tr>
                   <tr>
                     <td><img src="design/ico_archive2.gif" alt="" width="9" height="11" /></td>
-                    <td><strong>Email:jobportal.com</strong></td>
+                    <td><strong>Email:loc.lenguyentan@hcmut.edu.vn</strong></td>
                   </tr>
                   <tr>
                     <td><img src="design/ico_archive2.gif" alt="" width="9" height="11" /></td>
-                    <td><strong>Website:jobportal.com</strong></td>
+                    <td><strong>Website:jobportal</strong></td>
                   </tr>
 			
                 </table>

@@ -62,7 +62,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
     <meta name="robots" content="all,follow" />
 
     
-<title>JOB PORTAL BY JITESH</title>
+<title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
     

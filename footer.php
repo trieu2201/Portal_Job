@@ -19,8 +19,7 @@
             <i class="fas fa-gem me-3"></i>JOB PORTAL
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Here is the web that can provide you some jobs that can meet your requires.
           </p>
         </div>
         <!-- Grid column -->
@@ -57,10 +56,10 @@
           <p><i class="fas fa-home me-3"></i> Ho Chi Minh City, VN</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+              loc.lenguyentan@hcmut.edu.vn
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i class="fas fa-phone me-3"></i> 028 7300 4183(OISP)</p>
+          <p><i class="fas fa-print me-3"></i> 028 3864 7256(HCMUT)</p>
         </div>
         <!-- Grid column -->
       </div>

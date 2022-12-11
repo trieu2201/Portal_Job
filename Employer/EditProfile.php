@@ -14,7 +14,7 @@ if (!isset($_SESSION))
     <meta name="robots" content="all,follow" />
 
     
-<title>JOB PORTAL BY JITESH</title>
+<title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
     
