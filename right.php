@@ -1,23 +1,4 @@
-<div class="contact_box">
-  <div style= "background-color:  #FCA317;" >
-    <div class="contact_us" align="center">
-        Contact Us
-    </div>
-  </div>
-
-  <div class = "mx-auto" align ="center">
-
-    <p><strong>JOBIFIND</strong></p>
-    <P>0909495312</P>
-    <p>jobifind.com<br />
-    </p>
-    <p><b>Ho Chi Minh City, Vietnam</b></p>
-
-  </div> 
-
-
-
-  <!-- Category -->
+<div class="contact_box container-fluid">
   <div style= "background-color:  #FCA317;" >
     <div class="contact_us" align="center">
         Login
