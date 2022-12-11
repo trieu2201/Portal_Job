@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand row" href="#">
             
-            <img class="col"src="img/job_logo.png" alt="..." height="60" width="60"> 
+            <img class="col"src="img/job_logo.png" alt="..." href="index.php" height="60" width="60"> 
             <div class="col align-self-end" >
                 <p class = "ms-auto title">JOBIFIND</p>
             </div>

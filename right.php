@@ -28,7 +28,9 @@
             <br>
           </div>
          
-          
+          <div class="d-flex align-center">
+            <a href="">Haven't got an account</a>
+          </div>
          
           <div align ="center"> 
             <button  type="submit" class="btn " id="button" name = "button" value="Login">LOGIN</button>
