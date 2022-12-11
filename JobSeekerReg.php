@@ -1,81 +1,4 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="content-language" content="cs" />
-    <meta name="robots" content="all,follow" />
-
-    
-    <title>Welcome To Job Portal by JITESH</title>
-    <meta name="description" content="..." />
-    <meta name="keywords" content="..." />
-    
-    <link rel="index" href="./" title="Home" />
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-    <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
--->
-    </style>
-    <style type="text/css">
-
-.ds_box {
-	background-color: #FFF;
-	border: 1px solid #000;
-	position: absolute;
-	z-index: 32767;
-}
-
-.ds_tbl {
-	background-color: #FFF;
-}
-
-.ds_head {
-	background-color: #333;
-	color: #FFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	text-align: center;
-	letter-spacing: 2px;
-}
-
-.ds_subhead {
-	background-color: #CCC;
-	color: #000;
-	font-size: 12px;
-	font-weight: bold;
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-	width: 32px;
-}
-
-.ds_cell {
-	background-color: #EEE;
-	color: #000;
-	font-size: 13px;
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 5px;
-	cursor: pointer;
-}
-
-.ds_cell:hover {
-	background-color: #F3F3F3;
-} /* This hover code won't work for IE */
-
-</style>
-<script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
-<link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
-</head>
-
-
 <table class="ds_box" cellpadding="0" cellspacing="0" id="ds_conclass" style="display: none;">
 <tr><td id="ds_calclass">
 </td></tr>
@@ -346,7 +269,7 @@ function ds_onclick(d, m, y) {
     
 </head>
 
-<body id="www-url-cz">
+
 <SCRIPT language="JavaScript1.2" src="gen_validation.js"></SCRIPT>
 <SCRIPT language="JavaScript1.2">
 var arrFormValidation=
@@ -444,13 +367,8 @@ var arrFormValidation=
             ];
 </SCRIPT>
 <!-- Main -->
-<div id="main" class="box">
-<?php 
-include "Header.php"
-?>
-<?php 
-include "menu.php"
-?>   
+<div class = "container-fluid" >
+
 <!-- Page (2 columns) -->
     <div id="page" class="box">
     <div id="page-in" class="box">
@@ -487,7 +405,7 @@ include "menu.php"
 
             <!-- Article -->
             <div class="article">
-                <h2><span><a href="#">Job Seeker Registration Form</a></span></h2>
+                <h2><span>Job Seeker Registration Form</span></h2>
                
 
                     <div class="login">
@@ -622,17 +540,13 @@ include "menu.php"
             
         </div> <!-- /content -->
 
-<?php
-include "right.php"
-?>
+
 
     </div> <!-- /page-in -->
     </div> <!-- /page -->
 
  
-<?php
-include "footer.php"
-?>
+
 </div> <!-- /main -->
 
 <script type="text/javascript">

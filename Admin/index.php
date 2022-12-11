@@ -1,11 +1,13 @@
 <?php
 session_start();
 if(isset($_SESSION['$UserName'])){
-
 } 
 else{
-		header('location:../index.php');
+   	header('Location:http://localhost/JobPortal/index.php');
 }
+?>
+<?php
+$val = isset($_GET["page"]) ? $_GET["page"] :null;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
@@ -13,9 +15,7 @@ else{
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="cs" />
     <meta name="robots" content="all,follow" />
-
-    
-    <title>JOB PORTAL BY JITESH</title>
+    <title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
     
@@ -42,54 +42,30 @@ include "Header.php"
 ?>
 <?php 
 include "menu.php"
-?>   
-<!-- Page (2 columns) -->
-    <div id="page" class="box">
-    <div id="page-in" class="box">
-
-        <div id="strip" class="box noprint">
-
-            <!-- RSS feeds -->
-            <hr class="noscreen" />
-
-            <!-- Breadcrumbs -->
-            <p id="breadcrumbs">You are here: <a href="index.php">Home</a></p>
-          <hr class="noscreen" />
-            
-        </div> <!-- /strip -->
-
-        <!-- Content -->
-        <div id="content">
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-            
-            <!-- Article -->
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-            <!-- Article -->
-            <div class="article">
-                <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-               
-
-                <p>&nbsp;</p>
-
-              <p class="btn-more box noprint">&nbsp;</p>
-          </div> <!-- /article -->
-
-            <hr class="noscreen" />
-            
-        </div> <!-- /content -->
+?>  
+<?php 
+if(!is_null($val)) {
+    include "Home.php";
+} 
+else if ($val  =="Profile"){
+    include "Profile.php";
+}
+else if ($val =="Education"){
+     include "Education.php";
+}
+else if ($val =="SearchJob"){
+     include "SearchJob.php";
+}
+else if ($val =="Walkin"){
+     include "Walkin.php";
+}
+else if ($val =="Feedback"){
+     include "Feedback.php";
+}
+else if ($val =="logout"){
+     include "session_destroy.php";
+}
+?>
 
 <?php
 include "right.php"
