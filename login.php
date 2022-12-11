@@ -30,7 +30,7 @@ echo '<script type="text/javascript">alert("Wrong UserName or Password");window.
 else
 {
 $_SESSION['$UserName']=$UserName;
-	header('Location:http://localhost/JobPortal/Admin/index.php?page=Home');
+	header('Location:Admin/index.php?page=Home');
 } 
 mysqli_close($con);
 }
@@ -50,7 +50,7 @@ else
 $_SESSION['ID']=$row['JobSeekId'];
 $_SESSION['Name']=$row['JobSeekerName'];
 $_SESSION['$UserName_job']=$UserName;
-	header('Location:http://localhost/JobPortal/JobSeeker/index.php?page=Home');
+	header('Location:JobSeeker/index.php?page=Home');
 
 } 
 mysqli_close($con);
@@ -71,7 +71,7 @@ else
 	$_SESSION['ID']=$row['EmployerId'];
 $_SESSION['Name']=$row['CompanyName'];
 $_SESSION['$UserName_emp']=$UserName;
-  header('Location:http://localhost/JobPortal/Employer/index.php?page=Home');
+  header('Location:Employer/index.php?page=Home');
 } 
 mysqli_close($con);
 }
