@@ -17,25 +17,25 @@
             <div class="collapse navbar-collapse col" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="Profile.php?page=Profile">Profile</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=Profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="Education.php?page=Education">Education</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=Education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="SearchJob.php?page=SearchJob">Search Job</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=SearchJob">Search Job</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="Walkin.php?page=Walkin">Walkin Interview</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=Walkin">Walkin Interview</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="Feedback.php?page=Feedback">Feedback</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=Feedback">Feedback</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" aria-current="page" href="session_destroy.php?page=logout">Logout</a>
+                        <a class="nav-link navigation" aria-current="page" href="index.php?page=logout">Logout</a>
                     </li>
                 </ul>
             </div>

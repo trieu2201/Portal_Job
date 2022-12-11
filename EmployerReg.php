@@ -80,7 +80,7 @@ var arrFormValidation=
             ];
 </SCRIPT>
 <!-- Main -->
-<div id="main" class="box">  
+<div>  
 <!-- Page (2 columns) -->
     <div id="page" class="box">
     <div id="page-in" class="box">
