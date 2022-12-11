@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 if(isset($_SESSION['$UserName'])){
 
 } 
@@ -7,68 +10,10 @@ else{
 		header('location:../index.php');
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="content-language" content="cs"/>
-    <meta name="robots" content="all,follow"/>
 
-   
-    <title>JOB PORTAL BY JITESH</title>
-    <meta name="description" content="..."/>
-    <meta name="keywords" content="..."/>
+<script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css"/>
 
-    <link rel="index" href="./" title="Home"/>
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css"/>
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css"/>
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css"/>
-    <style type="text/css">
-        <!--
-        .style1 {
-            color: #000066;
-            font-weight: bold;
-        }
-
-        .style3 {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            color: #192666;
-        }
-
-        .style4 {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: small;
-            font-weight: bold;
-            color: #FFFFFF;
-        }
-
-        .style7 {
-            font-size: small
-        }
-
-        .style8 {
-            font-family: Verdana, Arial, Helvetica, sans-serif
-        }
-
-        .style9 {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: small;
-        }
-
-        -->
-    </style>
-    <script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-    <link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css"/>
-    <style type="text/css">
-        <!--
-        .style10 {
-            color: #192666
-        }
-
-        -->
-    </style>
     <style type="text/css">
 
         .ds_box {
@@ -119,7 +64,6 @@ else{
         /* This hover code won't work for IE */
 
     </style>
-</head>
 <table class="ds_box" cellpadding="0" cellspacing="0" id="ds_conclass" style="display: none;">
     <tr>
         <td id="ds_calclass">
@@ -387,56 +331,11 @@ else{
 
     // ]]> -->
 </script>
-</head>
 
-<body id="www-url-cz">
 <!-- Main -->
-<div>
-    <?php
-    include "Header.php"
-    ?>
-    <?php
-    include "menu.php"
-    ?>
-    <!-- Page (2 columns) -->
-    <div id="page" class="box">
-        <div id="page-in" class="box">
+<div id="main" class="box">
 
-            <div id="strip" class="box noprint">
-
-                <!-- RSS feeds -->
-                <hr class="noscreen"/>
-
-                <!-- Breadcrumbs -->
-                <p id="breadcrumbs">&nbsp;</p>
-                <hr class="noscreen"/>
-
-            </div> <!-- /strip -->
-
-            <!-- Content -->
-            <div id="content">
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-                <div class="article">
-                    <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-
-
+    
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td height="27" bgcolor="#A0B9F3"><span class="style4 style10">Create News</span></td>
@@ -487,9 +386,7 @@ else{
                                         <th bgcolor="#1CB5F1">
                                             <div align="left" class="style11 style7 style8">Date</div>
                                         </th>
-                                        <th height="32" bgcolor="#1CB5F1">
-                                            <div align="left" class="style11 style7 style8">Edit</div>
-                                        </th>
+                                 
                                         <th bgcolor="#1CB5F1">
                                             <div align="left" class="style11 style7 style8">Delete</div>
                                         </th>
@@ -521,13 +418,10 @@ else{
                                                 <div align="left"
                                                      class="style11 style7 style8"><?php echo $NewsDate; ?></div>
                                             </td>
+                                
                                             <td>
                                                 <div align="left" class="style11 style7 style8"><a
-                                                        href="EditNews.php?NewsId=<?php echo $Id; ?>">Edit</a></div>
-                                            </td>
-                                            <td>
-                                                <div align="left" class="style11 style7 style8"><a
-                                                        href="DeleteNews.php?NewsId=<?php echo $Id; ?>">Delete</a></div>
+                                                        href="index.php?page=DeleteNews&NewsId=<?php echo $Id; ?>">Delete</a></div>
                                             </td>
                                         </tr>
                                         <?php
@@ -548,42 +442,14 @@ else{
                                 </table>
                             </td>
                         </tr>
-                        <tr>
-                            <td height="26">
-                                <form method="post" action="InsertNews.php">
-                                    <table width="100%" height="109" border="0" cellpadding="0" cellspacing="0">
-                                    </table>
-                                </form>
-                            </td>
-                        </tr>
+
                     </table>
-                    <p>&nbsp;</p>
+                   
 
-                    <p class="btn-more box noprint">&nbsp;</p>
-                </div> <!-- /article -->
-
-                <hr class="noscreen"/>
-
-            </div> <!-- /content -->
-
-            <?php
-            include "right.php"
-            ?>
-
-        </div> <!-- /page-in -->
-    </div> <!-- /page -->
-
-
-    <?php
-    include "footer.php"
-    ?>
-</div> <!-- /main -->
-
+                                </div>
 <script type="text/javascript">
-    <!--
+    
     var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
     var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
-    //-->
+    
 </script>
-</body>
-</html>
