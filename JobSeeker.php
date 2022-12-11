@@ -1,32 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="content-language" content="cs" />
-    <meta name="robots" content="all,follow" />
-
-    
-    <title>JOB PORTAL BY JITESH</title>
-    <meta name="description" content="..." />
-    <meta name="keywords" content="..." />
-    
-    <link rel="index" href="./" title="Home" />
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-    <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
-.style2 {font-weight: bold}
--->
-    </style>
-</head>
-
-<body id="www-url-cz">
+<body >
 <SCRIPT language="JavaScript1.2" src="gen_validation.js"></SCRIPT>
 <SCRIPT language="JavaScript1.2">
 var arrFormValidation=
@@ -113,12 +85,7 @@ var arrFormValidation=
 </SCRIPT>
 <!-- Main -->
 <div id="main" class="box">
-<?php 
-include "Header.php"
-?>
-<?php 
-include "menu.php"
-?>   
+
 <!-- Page (2 columns) -->
     <div id="page" class="box">
     <div id="page-in" class="box">
@@ -154,63 +121,104 @@ include "menu.php"
             <hr class="noscreen" />
 
             <!-- Article -->
-            <div class="article">
-                <h2><span><a href="#">Our Job Seekers</a></span></h2>
+            <div class="container-fluid">
+                <h2>Our Job Description</h2>
                
-
-                <p>
-                <table width="100%" border="1" cellpadding="1" cellspacing="2" bordercolor="#006699" >
-<tr>
-<th height="32" bgcolor="#006699" class="style3"><div align="left" class="style9 style5 style2"><strong>Company Name</strong></div></th>
-<th bgcolor="#006699" class="style3"><div align="left" class="style9 style5 style2"><strong>Contact Person</strong></div></th>
-<th bgcolor="#006699" class="style3"><div align="left" class="style9 style5 style2"><strong>Email</strong></div></th>
-</tr>
-<?php
-// Establish Connection with Database
-$con = mysqli_connect("localhost","root","","job");
-// Select Database
-//mysqli_select_db("job", $con);
-// Specify the query to execute
-$sql = "select * from jobseeker_reg where Status='Confirm'";
-// Execute query
+                <div class="row">
+  
+                    <?php 
+                    // Establish Connection with Database
+                    $con = mysqli_connect("localhost","root","","job");
+                    // Select Database
+                    //mysqli_select_db("job", $con);
+                    // Specify the query to execute
+                    $sql = "select * from job_master where Vacancy > 0";
+                    // Execute query
 
 
 
-$result = mysqli_query($con,$sql);
+                    $result = mysqli_query($con,$sql);
 
 
-//var_dump($result);
+                    //var_dump($result);
+                    $numbering = 0;
+                    // Loop through each records
+                    ?>  
+                    <div class="col-4">
+                      <div class="list-group" id="list-tab" role="tablist">
+                        <?php
+                        while($row = mysqli_fetch_array($result))
+                        {
+                          $Name=$row['CompanyName'];
+                          $Title=$row['JobTitle'];
+                          $Vacany=$row['Vacancy'];
+                          $Description=$row['Description'];
+                          $Qualification=$row['MinQualification'];
+                          $id = $row['JobId'];
+                          
+                          ?>  
+                          <a 
+                            class="list-group-item list-group-item-action"  
+                            role="tab" 
+                            data-toggle="list" 
+                            href="#<?php echo 'job'.$id;?>" 
+                            >
+                            <?php echo $Title?>
+                          </a>
+                        <?php
+                        }
+                        ?>
+                      </div>
+                    </div>
+                    <?php
+                    // Retrieve Number of records returned
+                    $records = mysqli_num_rows($result);
+                    ?>
+                    <div class="col-8">
+                      <div class="tab-content" id="nav-tabContent">
+                        <?php
+                           foreach ($result as $value) 
+                            {
+                              $Name=$value['CompanyName'];
+                              $id = $value['JobId'];
+                              $Title=$value['JobTitle'];
+                              $Vacany=$value['Vacancy'];
+                              $Description=$value['Description'];
+                              $Qualification=$value['MinQualification'];
+                              ?>
+                              
+                              <div class="tab-pane fade"  id="<?php echo 'job'.$id?>" role="tabpanel">
+                                <h2 class="mb-1"><?php echo $Name?></h2>
+                                <br>
+                                <br>
+                                <h4><?php echo $Title?> </h4>
+                                <p>Required: <?php echo $Qualification?></p>
+                                <br>
+                                <button  type="submit" class="btn-primary btn-sm " id="button" name = "button" size>Apply now</button>
+                                <br>
+                                <h3>Description</h3>
+                                <p><?php echo $Description?></p>
 
-// Loop through each records
-while($row = mysqli_fetch_array($result))
-{
-$Name=$row['JobSeekerName'];
-$City=$row['City'];
-$Email=$row['Email'];
+                              </div>
+                              <?php
+                            
+                            }
+                        ?>
+                      </div>
+                    </div>
+                   
 
-?>
-<tr>
-<td class="style3"><div align="left" class="style9 style5"><strong><?php echo $Name;?></strong></div></td>
-<td class="style3"><div align="left" class="style9 style5"><strong><?php echo $City;?></strong></div></td>
-<td class="style3"><div align="left" class="style9 style5"><strong><?php echo $Email;?></strong></div></td>
-</tr>
-<?php
-}
-// Retrieve Number of records returned
-$records = mysqli_num_rows($result);
-?>
+                    <?php
+                    // Close the connection
+                    mysqli_close($con);
+                    ?>
+                  
+                  </div>
+   
 
-<?php
-// Close the connection
-mysqli_close($con);
-?>
-</table>
-    </td>
-  </tr>
-</table>
                 </p>
 
-                <div align="center"><a href="JobSeekerReg.php"><strong>New Job Seeker? Register Here</strong></a>                  </div>
+                <div align="center"><a href="index.php?page=JobSeekerReg"><strong>New Job Seeker? Register Here</strong></a>                  </div>
                 <p class="btn-more box noprint">&nbsp;</p>
           </div> <!-- /article -->
 
@@ -218,18 +226,5 @@ mysqli_close($con);
             
         </div> <!-- /content -->
 
-<?php
-include "right.php"
-?>
 
-    </div> <!-- /page-in -->
-    </div> <!-- /page -->
-
- 
-<?php
-include "footer.php"
-?>
 </div> <!-- /main -->
-
-</body>
-</html>

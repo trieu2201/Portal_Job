@@ -1,14 +1,22 @@
 <?php
 session_start();
 if(isset($_SESSION['$UserName'])){
-	header('location:Admin/index.php');
+	// header('location:Admin/index.php');
+	header('Location:http://localhost/JobPortal/Admin/index.php?role=Admin');
+
 } 
 if(isset($_SESSION['$UserName_job'])){
-	header('location:JobSeeker/index.php');
+	// header('location:JobSeeker/index.php');
+   	header('Location:http://localhost/JobPortal/JobSeeker/index.php?role=JobSeeker');
+
 } 
 if(isset($_SESSION['$UserName_emp'])){
-	header('location:Employer/index.php');
+	// header('location:Employer/index.php');
+   	header('Location:http://localhost/JobPortal/Employer/index.php?role=Employer');
+
 } 
+$val = isset($_GET["page"]) ? $_GET["page"] :null;
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -17,101 +25,67 @@ if(isset($_SESSION['$UserName_emp'])){
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="cs" />
     <meta name="robots" content="all,follow" />
-
-    
-    <title>JOB PORTAL BY JITESH</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+    <title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <link rel="index" href="./" title="Home" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
     <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-    <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
-.style2 {
-	font-size: medium;
-	font-weight: bold;
-}
--->
-    </style>
+    
+
 </head>
 
-<body id="www-url-cz">
+<body >
 <!-- Main -->
-<div id="main" class="box">
-<?php 
-include "Header.php"
-?>
+<div >
+
 <?php 
 include "menu.php"
 ?>   
-<!-- Page (2 columns) -->
-    <div id="page" class="box">
-    <div id="page-in" class="box">
-
-        <div id="strip" class="box noprint">
-
-            <!-- RSS feeds -->
-            <hr class="noscreen" />
-
-            <!-- Breadcrumbs -->
-            <p id="breadcrumbs">&nbsp;</p>
-          <hr class="noscreen" />
-            
-        </div> <!-- /strip -->
-
-        <!-- Content -->
-        <div id="content">
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-            
-            <!-- Article -->
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-            <!-- Article -->
-            <div class="article">
-                <h2><span><a href="#">Welcome To Job Portal System by JITESH</a></span></h2>
-				<h3><marquee>Welcome To Job Portal System by JITESH</marquee></h3>
-               
-
-                <p> <span class="style2">W</span>elcome to online Job Portal. It provides facility to the Job Seeker to search for various jobs as per his qualification. Here Job Seeker can registered himself on the web portal and create his profile along with his educational information. Job Seeker can search various jobs and apply for the Job.</p>
-              <p>This Portal is also designed for the various employer who required to recruit employees in their organization. Employer can registered himself on the web portal and then he can upload information of various job vacancies in their organization. Employeer can view the applications of Job Seeker and send call latter to the job seekers.</p>
-              <p align="right"> <img src="design/banner-4.jpg" alt="" width="510" height="300" /></p>
-              <p class="btn-more box noprint">&nbsp;</p>
-          </div> <!-- /article -->
-
-            <hr class="noscreen" />
-            
-        </div> <!-- /content -->
-
-<?php
-include "right.php"
+<?php 
+if(is_null($val)) {
+    include "Home.php";
+} 
+else if ($val  =="AboutUs"){
+    include "AboutUs.php";
+}
+else if ($val =="Employer"){
+     include "Employer.php";
+}
+else if ($val =="JobSeeker"){
+     include "JobSeeker.php";
+}
+else if ($val =="News"){
+     include "News.php";
+}
+else if ($val =="ContactUs"){
+     include "ContactUs.php";
+}else if ($val =="Forget"){
+    include "Forget.php";
+}else if ($val =="JobSeekerReg"){
+    include "JobSeekerReg.php";
+}else if ($val =="EmployerReg"){
+    include "EmployerReg.php";
+}
 ?>
 
-    </div> <!-- /page-in -->
-    </div> <!-- /page -->
-
- 
-<?php
-include "footer.php"
-?>
 </div> <!-- /main -->
-
+<?php 
+include "footer.php"
+?>   
 </body>
 </html>

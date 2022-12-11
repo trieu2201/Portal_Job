@@ -1,103 +1,51 @@
-        <!-- Right column -->
-        <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-        <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
-        <div id="col" class="noprint">
-          <center>
-          <div id="col-in">
+<header>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
 
-<!-- About Me -->
-<h3>
-  <center>Contact Us</center>
-</h3>
+<div class="contact_box container-fluid">
+  <div style= "background-color:  #FCA317;" >
+    <div class="contact_us" align="center">
+        Login
+    </div>
+  </div>
 
-<div id="about-me">
+  <div class="mx-auto mg" >
+    <form name="form1" method="post" action="login.php">
 
-  <p><strong>JOB-PORTAL</strong></p>
-  <P>099-520612</P>
-  <p>982348094</p>
-  <p>jobportal.com<br />
-  </p>
-  <p><b>Bangalore, India</b></p>
+          <div style="padding: 5px 10px;"> 
+            <label for="txtUser"  style="font-size: 20px"> Username</label> <br>
+            <input type="text" name="txtUser" id="txtUser" style="width: 90%;">
+            <span class="textfieldRequiredMsg">*</span>
 
+            <br>
+            <label for="txtPass"  style="font-size: 20px"> Password</label> <br>
+            <input type="password" name="txtPass" id="txtPass" style="width: 90%;">
+            <span class="textfieldRequiredMsg">*</span>
+            <br>
 
-</div> <!-- /about-me -->
-
-<hr class="noscreen" />
-
-<!-- Category -->
-<center><h3>Login</h3></center>
-
-<div class="login">
-  <form name="form1" method="post" action="login.php">
-    <table width="100%" border="0">
-      <tr>
-        <td><strong>User Name</strong></td>
-      </tr>
-      <tr>
-        <td><span id="sprytextfield1">
-            <label>
-              <input type="text" name="txtUser" id="txtUser">
-            </label>
-            <span class="textfieldRequiredMsg">*</span></span>
-          <label></label></td>
-      </tr>
-      <tr>
-        <td><strong>Password</strong></td>
-      </tr>
-      <tr>
-        <td><span id="sprytextfield2">
-            <label>
-              <input type="password" name="txtPass" id="txtPass">
-            </label>
-            <span class="textfieldRequiredMsg">*</span></span></td>
-      </tr>
-      <tr>
-        <td><strong>User Type</strong></td>
-      </tr>
-      <tr>
-        <td><label>
-            <select name="cmbUser" id="cmbUser">
+            <label for="cmbUser"  style="font-size: 20px"> User type</label>
+            <select class ="form-select" name="cmbUser" id="cmbUser" style="width: 90%;">
               <option value="JobSeeker">JobSeeker</option>
               <option value="Employer" selected="selected">Employer</option>
               <option value="Administrator">Administrator</option>
             </select>
-          </label></td>
-      </tr>
-      <tr>
-        <td><label>
-            <div align="center">
-              <input type="submit" name="button" id="button" value="Login">
-            </div>
-          </label></td>
-      </tr>
-      <tr>
-        <td>
-          <div align="center"><a href="Forget.php"><strong>Forgot Password? </strong></a></div>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
-<br />
+            <br>
+          </div>
+         
+          <div align ="center"> 
+            <button  type="submit" class="btn " id="button" name = "button" value="Login">LOGIN</button>
+          </div>
 
-<hr class="noscreen" />
-
-<!-- Archive -->
-
-
-<hr class="noscreen" />
-
-<!-- Links -->
-
-<hr class="noscreen" />
-</div>
-          </center>
-          <!-- /col-in -->
-        </div> <!-- /col -->
-        <script type="text/javascript">
-          <!--
-          var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
-          var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
-          //
-          -->
-        </script>
+          <br>
+          <div align="center"><a href="index.php?page=Forget">Forgot Password?</a></div>
+          <div class="d-flex">
+            <a class="btn" href="index.php?page=JobSeekerReg">Register as an Job Seeker</a>
+          </div>
+          <div class="d-flex">
+            <a class="btn" href="index.php?page=EmployerReg">Register as an Employer</a>
+          </div>
+          
+      
+    </form>
+  </div>
+  <br />

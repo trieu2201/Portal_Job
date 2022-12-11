@@ -14,7 +14,6 @@ $UserType=$_POST['cmbUser'];
 if($UserType=="Administrator")
 {
 $con = mysqli_connect("localhost","root","","job");
-
 $sql = "select * from user_master where UserName='".$UserName."' and Password='".$Password."'";
 $result = mysqli_query($con,$sql);
 $records = mysqli_num_rows($result);
@@ -25,8 +24,8 @@ echo '<script type="text/javascript">alert("Wrong UserName or Password");window.
 }
 else
 {
-	$_SESSION['$UserName']=$UserName;
-header("location:Admin/index.php");
+$_SESSION['$UserName']=$UserName;
+	header('Location:http://localhost/JobPortal/Admin/index.php?page=Home');
 } 
 mysqli_close($con);
 }
@@ -46,7 +45,8 @@ else
 $_SESSION['ID']=$row['JobSeekId'];
 $_SESSION['Name']=$row['JobSeekerName'];
 $_SESSION['$UserName_job']=$UserName;
-header("location:JobSeeker/index.php");
+	header('Location:http://localhost/JobPortal/JobSeeker/index.php?page=Home');
+
 } 
 mysqli_close($con);
 }
@@ -66,7 +66,7 @@ else
 	$_SESSION['ID']=$row['EmployerId'];
 $_SESSION['Name']=$row['CompanyName'];
 $_SESSION['$UserName_emp']=$UserName;
-header("location:Employer/index.php");
+  header('Location:http://localhost/JobPortal/Employer/index.php?page=Home');
 } 
 mysqli_close($con);
 }
