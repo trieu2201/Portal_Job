@@ -303,8 +303,13 @@ samp {
 .card img {
   max-height: 100%;
 }
+
+
+
+
 @media (max-width: 767px) {
   .card .img-wrapper {
     height: 17em;
   }
 }
+

@@ -160,8 +160,8 @@ var arrFormValidation=
                           <a 
                             class="list-group-item list-group-item-action"  
                             role="tab" 
-                            data-toggle="list" 
-                            href="#<?php echo 'job'.$id;?>" 
+                            data-bs-toggle="list" 
+                            href="#<?php echo 'job'.$id?>" 
                             >
                             <?php echo $Title?>
                           </a>
@@ -194,11 +194,11 @@ var arrFormValidation=
                                 <h4><?php echo $Title?> </h4>
                                 <p>Required: <?php echo $Qualification?></p>
                                 <br>
-                                <button  type="submit" class="btn-primary btn-sm " id="button" name = "button" size>Apply now</button>
-                                <br>
+                                
                                 <h3>Description</h3>
                                 <p><?php echo $Description?></p>
-
+                                <button  type="submit" class="btn-primary btn-sm " id="button" name = "button" size>Apply now</button>
+                                <br>
                               </div>
                               <?php
                             
@@ -217,8 +217,9 @@ var arrFormValidation=
    
 
                 </p>
-
-                <div align="center"><a href="index.php?page=JobSeekerReg"><strong>New Job Seeker? Register Here</strong></a>                  </div>
+                <br><br><br>
+                <div align="center">
+                  <a href="index.php?page=JobSeekerReg"><strong>New Job Seeker? Register Here</strong></a>                  </div>
                 <p class="btn-more box noprint">&nbsp;</p>
           </div> <!-- /article -->
 
