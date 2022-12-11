@@ -331,50 +331,11 @@ else{
 
     // ]]> -->
 </script>
-</head>
 
 <!-- Main -->
 <div id="main" class="box">
 
-    <!-- Page (2 columns) -->
-    <div id="page" class="box">
-        <div id="page-in" class="box">
-
-            <div id="strip" class="box noprint">
-
-                <!-- RSS feeds -->
-                <hr class="noscreen"/>
-
-                <!-- Breadcrumbs -->
-                <p id="breadcrumbs">&nbsp;</p>
-                <hr class="noscreen"/>
-
-            </div> <!-- /strip -->
-
-            <!-- Content -->
-            <div id="content">
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-                <div class="article">
-                    <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-
-
+    
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td height="27" bgcolor="#A0B9F3"><span class="style4 style10">Create News</span></td>
@@ -425,9 +386,7 @@ else{
                                         <th bgcolor="#1CB5F1">
                                             <div align="left" class="style11 style7 style8">Date</div>
                                         </th>
-                                        <th height="32" bgcolor="#1CB5F1">
-                                            <div align="left" class="style11 style7 style8">Edit</div>
-                                        </th>
+                                 
                                         <th bgcolor="#1CB5F1">
                                             <div align="left" class="style11 style7 style8">Delete</div>
                                         </th>
@@ -459,13 +418,10 @@ else{
                                                 <div align="left"
                                                      class="style11 style7 style8"><?php echo $NewsDate; ?></div>
                                             </td>
+                                
                                             <td>
                                                 <div align="left" class="style11 style7 style8"><a
-                                                        href="EditNews.php?NewsId=<?php echo $Id; ?>">Edit</a></div>
-                                            </td>
-                                            <td>
-                                                <div align="left" class="style11 style7 style8"><a
-                                                        href="DeleteNews.php?NewsId=<?php echo $Id; ?>">Delete</a></div>
+                                                        href="index.php?page=DeleteNews&NewsId=<?php echo $Id; ?>">Delete</a></div>
                                             </td>
                                         </tr>
                                         <?php
@@ -486,30 +442,15 @@ else{
                                 </table>
                             </td>
                         </tr>
-                        <tr>
-                            <td height="26">
-                                <form method="post" action="InsertNews.php">
-                                    <table width="100%" height="109" border="0" cellpadding="0" cellspacing="0">
-                                    </table>
-                                </form>
-                            </td>
-                        </tr>
+
                     </table>
-                    <p>&nbsp;</p>
+                   
 
-                    <p class="btn-more box noprint">&nbsp;</p>
-                </div> <!-- /article -->
-
-                <hr class="noscreen"/>
-
-            </div> <!-- /content -->
-
-
-
+                                </div>
 <script type="text/javascript">
-    <!--
+    
     var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
     var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
-    //-->
+    
 </script>
 

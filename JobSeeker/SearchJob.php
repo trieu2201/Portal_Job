@@ -145,7 +145,7 @@ $queryString_Recordset2 = sprintf("&totalRows_Recordset2=%d%s", $totalRows_Recor
                 <h2><span><a href="#">Search Job</a></span></h2>
                
 
-                <form id="form1" method="post" action="SearchJob.php">
+                <form id="form1" method="post" action="index.php?page=SearchJob">
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td><strong>Select Qualification:</strong></td>

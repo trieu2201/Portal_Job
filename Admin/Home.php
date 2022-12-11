@@ -1,45 +1,60 @@
-<!-- Page (2 columns) -->
-<div id="page" class="box">
-<div id="page-in" class="box">
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
 
-<div id="strip" class="box noprint">
+<div class='fluid-container'>
+<div class='h2 text-center mt-5 mb-4'>Database of User</div>
 
-    <!-- RSS feeds -->
-    <hr class="noscreen" />
+<select name ='role' id='roleSelect' class="form-select form-select-lg text-md-center" onchange="showCustomer(this.value)">
+  <option selected>Choose the role</option>
+  <option value="JOBSEEKERS">JOBSEEKERS</option>
+  <option value="EMPLOYERS">EMPLOYERS</option>
+</select>
+</br>
+<input type='text' class='form-control form-control-md text-md-center' id = 'live-search' autocomplete='false' placeholder='Search'>
+<div class='fluid-container' id = 'searchresult'></div>
+<div class='fluid-container' id = 'liveSearch'></div>
 
-    <!-- Breadcrumbs -->
-    <p id="breadcrumbs">You are here: <a href="index.php">Home</a></p>
-  <hr class="noscreen" />
-    
-</div> <!-- /strip -->
 
-<!-- Content -->
-<div id="content">
+<script type="text/javascript">
 
-    
-    <!-- /article -->
+  function showCustomer(str) {
+    if (str == "") {
+      document.getElementById("searchresult").innerHTML = "";
+      return;
+    }
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("searchresult").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "DisplayRole.php?role="+str);
+    xhttp.send();
+  }
 
-    <hr class="noscreen" />
 
-    
-    <!-- /article -->
+  $(document).ready(function(){
+      $('#live-search').keyup(function(){
+          var input= $(this).val();
+          if (input !=""){
+              $.ajax({
+                  url: 'livesearch.php',
+                  method:"POST",
+                  data:{input:input, select:$('#roleSelect').val()},
+                  success: function(data){
+                      $("#liveSearch").html(data);
+                      $("#searchresult").css("display","none");
+                      $("#liveSearch").css("display"," block");
+                  }
+              });
+          }else{
+              $("#searchresult").css('display',' block');
+              $("#liveSearch").css("display","none");
+              
 
-    <hr class="noscreen" />
-    
-    <!-- Article -->
-    
-    <!-- /article -->
-
-    <hr class="noscreen" />
-
-    <!-- Article -->
-    <div class="article">
-        <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-        
-
-        <p>&nbsp;</p>
-
-      <p class="btn-more box noprint">&nbsp;</p>
-  </div> <!-- /article -->
-
-    <hr class="noscreen" />
+          }
+      });
+  });
+</script>

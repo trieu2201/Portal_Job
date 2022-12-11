@@ -42,11 +42,11 @@ session_start();
 	// Close The Connection
 	mysqli_close ($con);
 	
-	echo '<script type="text/javascript">alert("Succesfully Applied For Job");window.location=\'SearchJob.php\';</script>';
+	echo '<script type="text/javascript">alert("Succesfully Applied For Job");window.location=\'index.php?page=SearchJob\';</script>';
 }
 else
 {
-echo '<script type="text/javascript">alert("You have already Applied For Job");window.location=\'SearchJob.php\';</script>';
+echo '<script type="text/javascript">alert("You have already Applied For Job");window.location=\'index.php?page=SearchJob\';</script>';
 }
 ?>
 </body>

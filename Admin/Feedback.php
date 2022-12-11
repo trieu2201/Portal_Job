@@ -12,44 +12,7 @@ else{
 ?>
 
 <div id="main" class="box">
-    <!-- Page (2 columns) -->
-    <div id="page" class="box">
-        <div id="page-in" class="box">
-
-            <div id="strip" class="box noprint">
-
-                <!-- RSS feeds -->
-                <hr class="noscreen"/>
-
-                <!-- Breadcrumbs -->
-                <p id="breadcrumbs">&nbsp;</p>
-                <hr class="noscreen"/>
-
-            </div> <!-- /strip -->
-
-            <!-- Content -->
-            <div id="content">
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-                <div class="article">
-                    <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-
+   
 
                     <table width="100%" border="1" bordercolor="#1CB5F1">
                         <tr>
@@ -112,13 +75,7 @@ else{
                         mysqli_close($con);
                         ?>
                     </table>
-                    <p>&nbsp;</p>
-
-                    <p class="btn-more box noprint">&nbsp;</p>
-                </div> <!-- /article -->
-
-                <hr class="noscreen"/>
-
+                
             </div> <!-- /content -->
 
             

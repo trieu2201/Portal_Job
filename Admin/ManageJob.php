@@ -15,48 +15,10 @@ else{
 <div id="main" class="box">
    
     <!-- Page (2 columns) -->
-    <div id="page" class="box">
-        <div id="page-in" class="box">
-
-            <div id="strip" class="box noprint">
-
-                <!-- RSS feeds -->
-                <hr class="noscreen"/>
-
-                <!-- Breadcrumbs -->
-                <p id="breadcrumbs">&nbsp;</p>
-                <hr class="noscreen"/>
-
-            </div> <!-- /strip -->
-
-            <!-- Content -->
-            <div id="content">
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-
-                <!-- /article -->
-
-                <hr class="noscreen"/>
-
-                <!-- Article -->
-                <div class="article">
-                    <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-
+ 
 
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
+                        <div class =' container text-center h2'>Status of Job Applicants</div>
                         <tr>
                             <td>
                                 <table width="100%" border="1" bordercolor="#1CB5F1">
@@ -114,7 +76,7 @@ else{
                                             </td>
                                             <td class="style3">
                                                 <div align="left" class="style9 style5"><strong><a
-                                                            href="DetailJob.php?JobId=<?php echo $Id; ?>">Detail</a></strong>
+                                                            href="index.php?page=DetailJob&JobId=<?php echo $Id; ?>">Detail</a></strong>
                                                 </div>
                                             </td>
 
@@ -138,13 +100,6 @@ else{
                             </td>
                         </tr>
                     </table>
-                    <p>&nbsp;</p>
-
-                    <p class="btn-more box noprint">&nbsp;</p>
+                
                 </div> <!-- /article -->
-
-                <hr class="noscreen"/>
-
-
-
-</div> <!-- /main -->
+                                </div>
