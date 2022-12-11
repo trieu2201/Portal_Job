@@ -11,6 +11,11 @@ session_start();
 $UserName=$_POST['txtUser'];
 $Password=$_POST['txtPass'];
 $UserType=$_POST['cmbUser'];
+$remember = $_POST['remember'];
+if($remember == 1){
+	setcookie('uname', $username, time()+60*60*24*10, "/");
+	setcookie('password', $password, time()+60*60*24*10, "/");
+}
 if($UserType=="Administrator")
 {
 $con = mysqli_connect("localhost","root","","job");

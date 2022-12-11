@@ -1,50 +1,45 @@
-        <!-- Right column -->
+<!-- Right column -->
 <?php
 
 ?>
 <style type="text/css">
-<!--
-.style1 {font-size: 18px}
--->
+
 </style>
 
 
 <div id="col" class="noprint">
-            <div id="col-in">
+  <div id="col-in">
+    <!-- About Me -->
+    <h3>Welcome</h3>
+      <div id="about-me">
+      <p class="style1">
+      <?php 
+      ?>
+      </p>
+    </div> 
+    <!-- /about-me -->
 
-                <!-- About Me -->
-                <h3>Welcome</h3>
+    <hr class="noscreen" />
 
-                <div id="about-me">
-                    <p class="style1">
-                      <?php 
-					
-					?>
-                    </p>
-              </div> 
-                <!-- /about-me -->
+    <!-- Category -->
+    <h3 >&nbsp;</h3>
 
-                <hr class="noscreen" />
+    <br/>
 
-                <!-- Category -->
-                <h3 >&nbsp;</h3>
+    <hr class="noscreen" />
 
-              <br/>
+    <!-- Archive -->
+    <h3>&nbsp;</h3>
 
-      <hr class="noscreen" />
+    <br/>
 
-                <!-- Archive -->
-                <h3>&nbsp;</h3>
+    <hr class="noscreen" />
 
-                <br/>
+    <!-- Links -->
+    <h3>&nbsp;</h3>
+    <br/>
 
-            <hr class="noscreen" />
-
-                <!-- Links -->
-                <h3>&nbsp;</h3>
-<br/>
-
-<hr class="noscreen" />
-          </div> <!-- /col-in -->
+    <hr class="noscreen" />
+  </div> <!-- /col-in -->
 </div> 
 <!-- /col -->

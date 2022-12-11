@@ -38,6 +38,15 @@
   font-weight: bold;
 }
 
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+}
+
 .title {
   color: #fca317;
   font-weight: bold;

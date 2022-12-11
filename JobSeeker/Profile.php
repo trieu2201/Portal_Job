@@ -62,7 +62,7 @@ $result = mysqli_query($con,$sql) or die(mysqli_error($con));
 // Loop through each records 
 $row = mysqli_fetch_array($result)
 ?>
-                <table width="100%" border="1" cellspacing="2" cellpadding="2">
+                <table width="100%" border="1" cellspacing="2" cellpadding="2" class="table">
                   <tr>
                     <td><strong>Name:</strong></td>
                     <td><?php echo $row['JobSeekerName'];?></td>
@@ -101,7 +101,7 @@ $row = mysqli_fetch_array($result)
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td><a href="index.php?page=EditProf">Edit profile</a></td>
                   </tr>
                 </table>
               <p>&nbsp;</p>
