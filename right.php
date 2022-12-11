@@ -30,6 +30,10 @@
               <option value="Administrator">Administrator</option>
             </select>
             <br>
+            <label class="form-check-lable text-muted">
+              <input type="checkbox" class="form-check-input" name="remember" value="1">
+              Keep me signed in
+            </label>
           </div>
          
           <div align ="center"> 

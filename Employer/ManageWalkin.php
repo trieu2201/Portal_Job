@@ -364,7 +364,7 @@ function ds_onclick(d, m, y) {
 
 <body id="www-url-cz">
 <!-- Main -->
-<div id="main" class="box">
+<div>
 <?php 
 include "Header.php"
 ?>

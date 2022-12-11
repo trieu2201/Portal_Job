@@ -1,50 +1,13 @@
 <?php
-if (!isset($_SESSION)) 
-{
-  session_start();
-  
-}
+    if (!isset($_SESSION)) {
+      session_start();
+    }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="content-language" content="cs" />
-    <meta name="robots" content="all,follow" />
-
-    
-<title>JOB PORTAL BY JITESH</title>
-    <meta name="description" content="..." />
-    <meta name="keywords" content="..." />
-    
-    <link rel="index" href="./" title="Home" />
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-    <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
--->
-    </style>
-    <script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-    <script src="../SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
-    <link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-    <link href="../SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
-</head>
 
 <body id="www-url-cz">
 <!-- Main -->
-<div>
-<?php 
-include "Header.php"
-?>
-<?php 
-include "menu.php"
-?>   
+<div id="main" class="box"> 
 <!-- Page (2 columns) -->
     <div id="page" class="box">
     <div id="page-in" class="box">
@@ -81,53 +44,64 @@ include "menu.php"
 
             <!-- Article -->
             <div class="article">
-                <h2><span><a href="#">Welcome <?php echo $_SESSION['Name'];?></a></span></h2>
+                <h2><span>Edit <?php echo $_SESSION['Name'];?> profile...</span></h2>
                <?php
-$ID=$_SESSION['ID'];
-// Establish Connection with Database
-$con = mysqli_connect("localhost","root","","job");
+                    $ID=$_SESSION['ID'];
+                    // Establish Connection with Database
+                    $con = mysqli_connect("localhost","root","","job");
 
-// Specify the query to execute
-$sql = "select * from Employer_Reg where EmployerId ='".$ID."'  ";
-// Execute query
-$result = mysqli_query($con,$sql);
-// Loop through each records 
-$row = mysqli_fetch_array($result)
-?>
-<form method="post" action="UpdateProfile.php">
+                    // Specify the query to execute
+                    $sql = "select * from jobseeker_reg where JobSeekId ='".$ID."'  ";
+                    // Execute query
+                    $result = mysqli_query($con,$sql);
+                    // Loop through each records
+                    $row = mysqli_fetch_array($result)
+                ?>
+                <form method="post" action="UpdateProfile.php" enctype="multipart/form-data">
                 <table width="100%" border="1" cellspacing="2" cellpadding="2">
+                    <tr>
+                    <td><strong>ID:</strong></td>
+                    <td><span id="sprytextfield0">
+                      <label>
+                        <input name="txtId" type="text" id="txtId" value="<?php echo $row['JobSeekId'];?>" />
+                      </label>
+                    <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+                  </tr>
                   <tr>
-                    <td><strong>Company ID:</strong></td>
+                    <td><strong>Name:</strong></td>
                     <td><span id="sprytextfield1">
                       <label>
-                      <input name="txtId" type="text" id="txtId" value="<?php echo $row['EmployerId'];?>" />
+                      <input name="txtName" type="text" id="txtName" value="<?php echo $row['JobSeekerName'];?>" />
                       </label>
                     <span class="textfieldRequiredMsg">A value is required.</span></span></td>
                   </tr>
-                  <tr>
-                    <td><strong>Company Name:</strong></td>
+                    <tr>
+                    <td><strong>Gender:</strong></td>
                     <td><span id="sprytextfield2">
                       <label>
-                      <input name="txtName" type="text" id="txtName" value="<?php echo $row['CompanyName'];?>" />
+                          <select name="txtGender" id="txtGender">
+                            <option value="male" <?php if ($row['Gender'] === 'Male') echo "selected";?>>Male</option>
+                            <option value="female" <?php if ($row['Gender'] === 'Female') echo "selected";?>>Female</option>
+                          </select>
                       </label>
-                    <span class="textfieldRequiredMsg">A value is required.</span></span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>Contact Person:</strong></td>
-                    <td><span id="sprytextfield3">
-                      <label>
-                      <input name="txtContact" type="text" id="txtContact" value="<?php echo $row['ContactPerson'];?>" />
-                      </label>
-                    <span class="textfieldRequiredMsg">A value is required.</span></span></td>
-                  </tr>
-                  <tr>
+                    <span class="textareaRequiredMsg">A value is required.</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gender:</strong></td>
+                        <td><span id="sprytextfield3">
+                        <label>
+                          <input name="txtDate" type="date" id="txtDate" value="<?php echo $row['BirthDate'];?>" />
+                        </label>
+                    <span class="textareaRequiredMsg">A value is required.</span></span></td>
+                    </tr>
+                    <tr>
                     <td><strong>Address:</strong></td>
                     <td><span id="sprytextarea1">
                       <label>
                       <textarea name="txtAddress" id="txtAddress" cols="35" rows="3"><?php echo $row['Address'];?></textarea>
                       </label>
                     <span class="textareaRequiredMsg">A value is required.</span></span></td>
-                  </tr>
+                    </tr>
                   <tr>
                     <td><strong>City:</strong></td>
                     <td><span id="sprytextfield4">
@@ -153,10 +127,18 @@ $row = mysqli_fetch_array($result)
                     <span class="textfieldRequiredMsg">A value is required.</span></span></td>
                   </tr>
                   <tr>
-                    <td><strong>Area of Work:</strong></td>
+                    <td><strong>Qualification:</strong></td>
                     <td><span id="sprytextfield7">
                       <label>
-                      <input name="txtArea" type="text" id="txtArea" value="<?php echo $row['Area_Work'];?>" />
+                      <input name="txtQual" type="text" id="txtQual" value="<?php echo $row['Qualification'];?>" />
+                      </label>
+                    <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+                  </tr>
+                    <tr>
+                    <td><strong>Resume:</strong></td>
+                    <td><span id="sprytextfield10">
+                      <label>
+                      <input name="txtResume" type="file" id="txtResume"/>
                       </label>
                     <span class="textfieldRequiredMsg">A value is required.</span></span></td>
                   </tr>
@@ -194,21 +176,15 @@ $row = mysqli_fetch_array($result)
             
         </div> <!-- /content -->
 
-<?php
-include "right.php"
-?>
 
     </div> <!-- /page-in -->
     </div> <!-- /page -->
 
- 
-<?php
-include "footer.php"
-?>
 </div> <!-- /main -->
 
 <script type="text/javascript">
-<!--
+
+var sprytextfield0 = new Spry.Widget.ValidationTextField("sprytextfield0");
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
@@ -219,7 +195,8 @@ var sprytextfield6 = new Spry.Widget.ValidationTextField("sprytextfield6");
 var sprytextfield7 = new Spry.Widget.ValidationTextField("sprytextfield7");
 var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8");
 var sprytextfield9 = new Spry.Widget.ValidationTextField("sprytextfield9");
-//-->
+//var sprytextfield10 = new Spry.Widget.ValidationTextField("sprytextfield10");
+
 </script>
 </body>
 </html>

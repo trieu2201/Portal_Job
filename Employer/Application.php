@@ -83,7 +83,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
 <body id="www-url-cz">
 <!-- Main -->
-<div id="main" class="box">
+<div>
 <?php 
 include "Header.php"
 ?>

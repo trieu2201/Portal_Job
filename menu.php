@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container-fluid">
-        <a class="navbar-brand row" href="#">
+        <a class="navbar-brand row" href="index.php">
             
             <img class="col"src="img/job_logo.png" alt="..." href="index.php" height="60" width="60"> 
             <div class="col align-self-end" >
-                <p class = "ms-auto title">JOBIFIND</p>
+                <p class = "ms-auto title">JOB PORTAL</p>
             </div>
         </a>
         <button class="navbar-toggler" 
