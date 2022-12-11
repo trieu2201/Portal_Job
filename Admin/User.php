@@ -17,8 +17,9 @@ else{
 
 <div id="main" class="box">
             <form id="form1" name="form1" method="post" action="InsertUser.php">
+            <div class='fluid-container text-center text-md' bgcolor="#A0B9F3">Create New Admin</div>
+
             <table border="1px;" align="center" class = 'table'>
-              <td bgcolor="#A0B9F3">Create New Admin</td>
               <tr>
                 <td height="35"><span class="style10">User Name:</span></td>
                 <td><span id="sprytextfield1">
