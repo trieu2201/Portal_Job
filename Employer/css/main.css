@@ -12,6 +12,51 @@ div {
   padding: 0;
 }
 
+.ds_box {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: absolute;
+  z-index: 32767;
+}
+
+.ds_tbl {
+  background-color: #fff;
+}
+
+.ds_head {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.ds_subhead {
+  background-color: #ccc;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 32px;
+}
+
+.ds_cell {
+  background-color: #eee;
+  color: #000;
+  font-size: 13px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.ds_cell:hover {
+  background-color: #f3f3f3;
+}
+
 h1,
 h2,
 h3,

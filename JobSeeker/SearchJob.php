@@ -25,6 +25,7 @@ if(isset($_SESSION['$UserName_job'])){
 </script>
 
 <div class="row">
+  <h2 class = "ms-auto title" style = "font-size: 50px;"><span>Search</span></h2>
   <div class="col-md-6 col-md-offset-3">
     <input type="text" class="find form-control" name="find">
   </div>

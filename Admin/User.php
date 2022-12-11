@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 if(isset($_SESSION['$UserName'])){
 
 } 
@@ -7,90 +10,15 @@ else{
 		header('location:../index.php');
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="content-language" content="cs" />
-    <meta name="robots" content="all,follow" />
+<script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 
-    
-<title>JOB PORTAL BY JITESH</title>
-    <meta name="description" content="..." />
-    <meta name="keywords" content="..." />
-    
-    <link rel="index" href="./" title="Home" />
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-    <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
-.style3 {font-weight: bold}
--->
-    </style>
-    <script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-    <link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-</head>
 
-<body id="www-url-cz">
-<!-- Main -->
-<div>
-<?php 
-include "Header.php"
-?>
-<?php 
-include "menu.php"
-?>   
-<!-- Page (2 columns) -->
-    <div id="page" class="box">
-    <div id="page-in" class="box">
 
-        <div id="strip" class="box noprint">
-
-            <!-- RSS feeds -->
-            <hr class="noscreen" />
-
-            <!-- Breadcrumbs -->
-            <p id="breadcrumbs">&nbsp;</p>
-          <hr class="noscreen" />
-            
-        </div> <!-- /strip -->
-
-        <!-- Content -->
-        <div id="content">
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-            
-            <!-- Article -->
-           
-            <!-- /article -->
-
-            <hr class="noscreen" />
-
-            <!-- Article -->
-            <div class="article">
-              <h2><span><a href="#">Welcome To Control Panel</a></span></h2>
-               
-
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td height="27" bgcolor="#A0B9F3"><strong>Create New User</strong></td>
-        </tr>
-        <tr>
-          <td height="26"><form id="form1" name="form1" method="post" action="InsertUser.php">
-            <table width="100%" height="95" border="0" cellpadding="0" cellspacing="0">
+<div id="main" class="box">
+            <form id="form1" name="form1" method="post" action="InsertUser.php">
+            <table border="1px;" align="center" class = 'table'>
+              <td bgcolor="#A0B9F3">Create New Admin</td>
               <tr>
                 <td height="35"><span class="style10">User Name:</span></td>
                 <td><span id="sprytextfield1">
@@ -114,13 +42,12 @@ include "menu.php"
                 </label></td>
               </tr>
             </table>
-                    </form>            </td>
-        </tr>
+            </form>            
         <tr>
           <td height="25" bgcolor="#A0B9F3"><strong>User List</strong></td>
         </tr>
         <tr>
-          <td>
+        
           <table width="100%" border="1" bordercolor="#1CB5F1" >
 <tr>
 <th height="32" bgcolor="#1CB5F1" class="style3"><div align="left" class="style9 style5"><strong>Id</strong></div></th>
@@ -145,8 +72,8 @@ $UserName=$row['UserName'];
 <tr>
 <td class="style3"><div align="left" class="style9 style5"><strong><?php echo $Id;?></strong></div></td>
 <td class="style3"><div align="left" class="style9 style5"><strong><?php echo $UserName;?></strong></div></td>
-<td class="style3"><div align="left" class="style9 style5"><strong><a href="EditUser.php?UserId=<?php echo $Id;?>">Edit</a></strong></div></td>
-<td class="style3"><div align="left" class="style9 style5"><strong><a href="DeleteUser.php?UserId=<?php echo $Id;?>">Delete</a></strong></div></td>
+<td class="style3"><div align="left" class="style9 style5"><strong><a href="index.php?page=EditUser&UserId=<?php echo $Id;?>">Edit</a></strong></div></td>
+<td class="style3"><div align="left" class="style9 style5"><strong><a href="index.php?page=DeleteUser&UserId=<?php echo $Id;?>">Delete</a></strong></div></td>
 </tr>
 <?php
 }
@@ -165,31 +92,19 @@ mysqli_close($con);
         </tr>
       </table>
 
-              <p class="btn-more box noprint">&nbsp;</p>
+             
           </div> <!-- /article -->
 
             <hr class="noscreen" />
             
         </div> <!-- /content -->
 
-<?php
-include "right.php"
-?>
 
-    </div> <!-- /page-in -->
-    </div> <!-- /page -->
-
- 
-<?php
-include "footer.php"
-?>
-</div> <!-- /main -->
-
+</div>
+</div>
 <script type="text/javascript">
-<!--
+
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
-//-->
+
 </script>
-</body>
-</html>

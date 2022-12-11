@@ -47,7 +47,7 @@ if(isset($_SESSION['$UserName_job'])){
 
             <!-- Article -->
             <div class="article">
-                <h2><span><a href="#">Feedback </a></span></h2>
+                <h2 class = "ms-auto title" style = "font-size: 50px;"><span>Feedback</span></h2>
                
 
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">

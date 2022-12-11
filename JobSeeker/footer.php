@@ -36,7 +36,7 @@
             Useful links
           </h6>
           <p>
-            <a href="index.php?page=JobSeeker" class="text-reset">Jobs</a>
+            <a href="../index.php?page=JobSeeker" class="text-reset">Jobs</a>
           </p>
           <p>
             <a href="index.php?page=News" class="text-reset">Latest News</a>

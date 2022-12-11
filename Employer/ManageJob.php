@@ -1,58 +1,17 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 if (isset($_SESSION['$UserName_emp'])) {
 } else {
   header('location:../index.php');
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="content-language" content="cs" />
-  <meta name="robots" content="all,follow" />
-
-
-  <title>JOB PORTAL BY JITESH</title>
-  <meta name="description" content="..." />
-  <meta name="keywords" content="..." />
-
-  <link rel="index" href="./" title="Home" />
-  <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-  <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-  <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
-  <style type="text/css">
-    <!--
-    .style1 {
-      color: #000066;
-      font-weight: bold;
-    }
-    -->
-  </style>
-  <script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-  <script src="../SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
-  <link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-  <link href="../SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
-  <style type="text/css">
-    <!--
-    .style3 {
-      font-weight: bold
-    }
-    -->
-  </style>
-</head>
-
 <body id="www-url-cz">
   <!-- Main -->
   <div>
-    <?php
-    include "Header.php"
-    ?>
-    <?php
-    include "menu.php"
-    ?>
     <!-- Page (2 columns) -->
     <div id="page" class="box">
       <div id="page-in" class="box">
@@ -89,7 +48,7 @@ if (isset($_SESSION['$UserName_emp'])) {
 
           <!-- Article -->
           <div class="article">
-            <h2><span><a href="#">Welcome <?php echo $_SESSION['Name']; ?></a></span></h2>
+            <h2 class = "ms-auto title" style = "font-size: 50px;"><span>Welcome <?php echo $_SESSION['Name']; ?></span></h2>
 
 
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -238,26 +197,15 @@ if (isset($_SESSION['$UserName_emp'])) {
 
         </div> <!-- /content -->
 
-        <?php
-        include "right.php"
-        ?>
-
       </div> <!-- /page-in -->
     </div> <!-- /page -->
-
-
-    <?php
-    include "footer.php"
-    ?>
   </div> <!-- /main -->
 
   <script type="text/javascript">
-    <!--
     var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
     var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
     var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
     //
-    -->
   </script>
 </body>
 

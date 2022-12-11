@@ -49,7 +49,7 @@ if(isset($_SESSION['$UserName_job'])){
 
             <!-- Article -->
             <div class="article">
-                <h2><span><a href="#">Education Qualification </a></span></h2>
+            <h2 class = "ms-auto title" style = "font-size: 50px;"><span>Education Qualification </span></h2>
                
 
               <table width="100%" border="1" cellspacing="2" cellpadding="2">

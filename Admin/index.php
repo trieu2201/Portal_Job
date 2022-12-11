@@ -18,67 +18,76 @@ $val = isset($_GET["page"]) ? $_GET["page"] :null;
     <title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
-    
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="index" href="./" title="Home" />
-    <link rel="stylesheet" media="screen,projection" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" media="print" type="text/css" href="./css/print.css" />
-    <link rel="stylesheet" media="aural" type="text/css" href="./css/aural.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="css/print.css" />
+    <link rel="stylesheet" media="aural" type="text/css" href="css/aural.css" />
     <style type="text/css">
-<!--
-.style1 {
-	color: #000066;
-	font-weight: bold;
-}
--->
+
     </style>
 </head>
 
 <body id="www-url-cz">
 <!-- Main -->
-<div>
-<?php 
 
-include "Header.php"
-?>
 <?php 
 include "menu.php"
 ?>  
 <?php 
-if(!is_null($val)) {
+if(is_null($val)) {
     include "Home.php";
 } 
-else if ($val  =="Profile"){
-    include "Profile.php";
+else if ($val =="Home"){
+     include "Home.php";
 }
-else if ($val =="Education"){
-     include "Education.php";
+else if ($val  =="User"){
+    include "User.php";
 }
-else if ($val =="SearchJob"){
-     include "SearchJob.php";
+else if ($val =="ManageJob"){
+     include "ManageJob.php";
 }
-else if ($val =="Walkin"){
-     include "Walkin.php";
+else if ($val =="ManageEmployer"){
+     include "ManageEmployer.php";
+}
+else if ($val =="News"){
+     include "News.php";
 }
 else if ($val =="Feedback"){
      include "Feedback.php";
+}
+else if ($val =="EditUser"){
+     include "EditUser.php";
+}
+else if ($val =="DeleteUser"){
+     include "DeleteUser.php";
+}
+else if ($val =="UpdateUser"){
+     include "UpdateUser.php";
+}
+else if ($val =="DetailJob"){
+     include "DetailJob.php";
+}
+else if ($val =="DetailEmp"){
+     include "DetailEmp.php";
+}
+else if ($val =="EditNews"){
+     include "EditNews.php";
+}
+else if ($val =="DeleteNews"){
+     include "DeleteNews.php";
 }
 else if ($val =="logout"){
      include "session_destroy.php";
 }
 ?>
 
-<?php
-include "right.php"
-?>
-
-    </div> <!-- /page-in -->
-    </div> <!-- /page -->
-
- 
+</body>
 <?php
 include "footer.php"
 ?>
-</div> <!-- /main -->
 
-</body>
 </html>

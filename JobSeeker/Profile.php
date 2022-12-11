@@ -49,7 +49,7 @@ if(isset($_SESSION['$UserName_job'])){
 
             <!-- Article -->
             <div class="article">
-                <h2><span><a href="#">Welcome <?php echo $_SESSION['Name'];?></a></span></h2>
+                <h2 class = "ms-auto title" style = "font-size: 50px;"><span>Welcome <?php echo $_SESSION['Name'];?></span></h2>
                
 <?php
 $ID=$_SESSION['ID'];
