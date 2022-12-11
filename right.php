@@ -1,3 +1,7 @@
+<header>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
+
 <div class="contact_box container-fluid">
   <div style= "background-color:  #FCA317;" >
     <div class="contact_us" align="center">
@@ -28,16 +32,18 @@
             <br>
           </div>
          
-          <div class="d-flex align-center">
-            <a href="">Haven't got an account</a>
-          </div>
-         
           <div align ="center"> 
             <button  type="submit" class="btn " id="button" name = "button" value="Login">LOGIN</button>
-  
           </div>
+
           <br>
           <div align="center"><a href="index.php?page=Forget">Forgot Password?</a></div>
+          <div class="d-flex">
+            <a class="btn" href="index.php?page=JobSeekerReg">Register as an Job Seeker</a>
+          </div>
+          <div class="d-flex">
+            <a class="btn" href="index.php?page=EmployerReg">Register as an Employer</a>
+          </div>
           
       
     </form>

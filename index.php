@@ -32,7 +32,7 @@ $val = isset($_GET["page"]) ? $_GET["page"] :null;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
-    <title>JOB PORTAL BY JITESH</title>
+    <title>JOB PORTAL</title>
     <meta name="description" content="..." />
     <meta name="keywords" content="..." />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -78,6 +78,8 @@ else if ($val =="ContactUs"){
     include "Forget.php";
 }else if ($val =="JobSeekerReg"){
     include "JobSeekerReg.php";
+}else if ($val =="EmployerReg"){
+    include "EmployerReg.php";
 }
 ?>
 
