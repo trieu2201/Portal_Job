@@ -2,17 +2,17 @@
 session_start();
 if(isset($_SESSION['$UserName'])){
 	// header('location:Admin/index.php');
-	header('Location:http://localhost/JobPortal/Admin/index.php?role=Admin');
+	header('Location:Admin/index.php');
 
 } 
 if(isset($_SESSION['$UserName_job'])){
 	// header('location:JobSeeker/index.php');
-   	header('Location:http://localhost/JobPortal/JobSeeker/index.php?role=JobSeeker');
+   	header('Location:JobSeeker/index.php');
 
 } 
 if(isset($_SESSION['$UserName_emp'])){
 	// header('location:Employer/index.php');
-   	header('Location:http://localhost/JobPortal/Employer/index.php?role=Employer');
+   	header('Location:Employer/index.php');
 
 } 
 $val = isset($_GET["page"]) ? $_GET["page"] :null;
