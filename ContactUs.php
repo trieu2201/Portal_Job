@@ -43,7 +43,7 @@
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="6%"><img src="design/ico_archive2.gif" alt="" width="9" height="11" /></td>
-                    <td width="94%"><strong>jobifind.com<br/>
+                    <td width="94%"><strong>JOB PORTAL.com<br/>
                     MG road,<br/>
                     Bangalore, India<br/>
                     Pincode:560086</strong></td>

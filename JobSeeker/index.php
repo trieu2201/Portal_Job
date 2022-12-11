@@ -39,12 +39,9 @@ $val = isset($_GET["page"]) ? $_GET["page"] :null;
 
 </head>
 
-<body id="www-url-cz">
+<body>
 <!-- Main -->
-<div id="main" class="box">
-<?php 
-include "Header.php"
-?>
+<div>
 <?php 
 include "menu.php"
 ?>   
