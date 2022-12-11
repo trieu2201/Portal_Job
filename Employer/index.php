@@ -5,7 +5,7 @@ if(isset($_SESSION['$UserName_emp'])){
 
 } 
 else{
-	header('Location:http://localhost/JobPortal/index.php');
+	header('Location:../index.php');
 
 }
 $val = isset($_GET["page"]) ? $_GET["page"] :null;
@@ -49,9 +49,12 @@ include "Header.php"
 include "menu.php"
 ?>   
 <?php 
-if(!is_null($val)) {
+if(is_null($val)) {
     include "Home.php";
-} 
+}
+else if ($val =="Home"){
+     include "Home.php";
+}
 else if ($val  =="Profile"){
     include "Profile.php";
 }

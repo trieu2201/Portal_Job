@@ -69,6 +69,10 @@ else if ($val =="logout"){
      include "session_destroy.php";
 }
 ?>
+
+<?php
+include "right.php"
+?>
 </div> <!-- /page-in -->
 </div> <!-- /page -->
 <?php
